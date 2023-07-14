@@ -26,7 +26,7 @@ localizaciones.forEach(function (localizacion) {
 });
 
 //Importa la biblioteca axios en el entorno de JavaScript que estás utilizando. La palabra clave require se utiliza en entornos de ejecución basados en CommonJS, como Node.js, para importar módulos o bibliotecas en el código.
-const axios = require("axios");
+var axios = require("axios");
 
 //Definir los limites geograficos para New York
 const bounds = {
@@ -37,13 +37,12 @@ const bounds = {
 };
 
 //Realiza la solicitud HTTP para obtener las ubicaciones
-axios
-  .get("https://api.waqi.info/map/bounds/", {
-    params: {
-      latlng: "${bounds.south},${bounds.west},${bounds.north},${bounds.east}",
-      token: "381eeb3d963853a18901fb6120d5ca483dee3a37",
-    },
-  })
+get("https://api.waqi.info/map/bounds/", {
+  params: {
+    latlng: "${bounds.south},${bounds.west},${bounds.north},${bounds.east}",
+    token: "381eeb3d963853a18901fb6120d5ca483dee3a37",
+  },
+})
   .then((response) => {
     //Procesa las respuesta para obtener las ubicaciones
     const locations = response.data.data;
