@@ -1,22 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapey</title>
-    <link rel="stylesheet" type="text/css" href="Mapey.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <title>MAPEY</title>
+  <link rel="stylesheet" type="text/css" href="Mapey.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Moul&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orienta&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="map"></div>
+  <header style="background-color: #AAD9ED;">
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar..." class="search-input">
+      <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+    </div>
+    <h1 class="logo">MAPEY</h1>
+    <button class="info-toggle"><i class="fas fa-chevron-down"></i></button>
+  </header>
+  
+  <div class="content">
+    <div id= "BloqueInformacion" class="info-block">
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <div class="Moverlo">ssdas</div>
+    </div>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="Mapey.js"></script>
-    
+  </div>
+ 
+  <div class="button-container">
+    <button id = "Manhattan" class="district-button">Manhattan</button>
+    <button id = "Brooklyn" class="district-button">Brooklyn</button>
+    <button id = "Queens" class="district-button">Queens</button>
+    <button id = "Bronx" class="district-button">Bronx</button>
+    <button id = "Staten Island" class="district-button">Staten Island</button>
+  </div>
+</div>
+  <script src="Mapey.js"></script>
+
 </body>
 
 </html>
