@@ -6,13 +6,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Moul&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Orienta&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 
 <body>
   <header style="background-color: #AAD9ED;">
-    <div class="search-bar">
-      <input type="text" id="search-bar" placeholder="Buscar..." class="search-input">
-      <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar" class="search-input">
+        <button onclick="searchLocation()" class="search-button"><i class="fas fa-search"></i></button>
+      </div>
+
     </div>
     <h1 class="logo">MAPEY</h1>
     <button class="info-toggle"><i class="fas fa-chevron-down"></i></button>
@@ -35,8 +38,13 @@
     <button id = "Staten Island" class="district-button">Staten Island</button>
   </div>
 </div>
+<div id="map"></div>
+
+  <script src="https://kit.fontawesome.com/your-kit-id.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
   <script src="Mapey.js"></script>
 
 </body>
 
 </html>
+

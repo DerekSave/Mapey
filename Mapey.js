@@ -53,6 +53,35 @@ document.querySelector('.info-toggle').addEventListener('click', function() {
     console.error('Error al obtener los datos de calidad del aire:', error);
   });
 
- 
+  // Intento de buscador  
+  
+  function searchLocation() {
+    var address = searchInput.value;
+  
+    if (marker) {
+      map.removeLayer(marker);
+    }
+  
+    var Distlocations = {
+      "Manhattan": { lat: 40.7831, lon: -73.9712 },
+      "Brooklyn": { lat: 40.6782, lon: -73.9442 },
+      "Queens": { lat: 40.7282, lon: -73.7949 },
+      "Bronx": { lat: 40.8448, lon: -73.8648 },
+      "Staten Island": { lat: 40.5795, lon: -74.1502 }
+    };
+  
+    var location = Distlocations[address];
+  
+    if (location) {
+      var lat = parseFloat(location.lat);
+      var lon = parseFloat(location.lon);
+  
+      map.setView([lat, lon], 15);
+  
+      marker = L.marker([lat, lon]).addTo(map);
+    } else {
+      alert('No se encontró la ubicación ingresada en los distritos de Nueva York.');
+    }
+  }
 
   
