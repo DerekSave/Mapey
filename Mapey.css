@@ -31,6 +31,8 @@ header {
   display: flex;
   align-items: center;
   border-radius: 30px;
+  border: none;
+  outline: none;
   overflow: hidden;
   background-color: #ffffff;
   padding: 10px;
@@ -52,6 +54,8 @@ header {
 
 .search-button i {
   color: #0b6488;
+  border: none;
+  outline: none;
 }
 
 .content {
@@ -99,3 +103,5 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background-image: linear-gradient(to bottom, #f2f2f2, #e7e6e6);
 }
+
+
