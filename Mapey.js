@@ -150,34 +150,9 @@ function toggleInfoBlock(district) {
 
   // Intento de buscador  
   
-  function searchLocation() {
-    var address = searchInput.value;
+ 
   
-    if (marker) {
-      map.removeLayer(marker);
-    }
-  
-    var Distlocations = {
-      "Manhattan": { lat: 40.7831, lon: -73.9712 },
-      "Brooklyn": { lat: 40.6782, lon: -73.9442 },
-      "Queens": { lat: 40.7282, lon: -73.7949 },
-      "Bronx": { lat: 40.8448, lon: -73.8648 },
-      "Staten Island": { lat: 40.5795, lon: -74.1502 }
-    };
-  
-    var location = Distlocations[address];
-  
-    if (location) {
-      var lat = parseFloat(location.lat);
-      var lon = parseFloat(location.lon);
-  
-      map.setView([lat, lon], 15);
-  
-      marker = L.marker([lat, lon]).addTo(map);
-    } else {
-      alert('No se encontró la ubicación ingresada en los distritos de Nueva York.');
-    }
-  }
+
 
   axios.get('https://api.waqi.info/feed/queens/?token=bd1979c8ff6abdfc6029f199bdc2dfa3163903ee')
   .then(response => {
@@ -341,3 +316,35 @@ function toggleInfoBlock(district) {
   .catch(error => {
     console.error('Error al obtener los datos de calidad del aire:', error);
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Tu código JavaScript aquí
+    // Incluye la función searchLocation()
+    function searchLocation() { 
+      var address = searchInput.value;
+    
+      if (marker) {
+        map.removeLayer(marker);
+      }
+    
+      var Distlocations = {
+        "Manhattan": { lat: 40.7831, lon: -73.9712 },
+        "Brooklyn": { lat: 40.6782, lon: -73.9442 },
+        "Queens": { lat: 40.7282, lon: -73.7949 },
+        "Bronx": { lat: 40.8448, lon: -73.8648 },
+        "Staten Island": { lat: 40.5795, lon: -74.1502 }
+      };
+      if (location) {
+        var lat = parseFloat(location.lat);
+        var lon = parseFloat(location.lon);
+    
+        map.setView([lat, lon], 15);
+    
+        marker = L.marker([lat, lon]).addTo(map);
+      } else {
+        alert('No se encontró la ubicación ingresada en los distritos de Nueva York.');
+      }
+    }
+      var location = Distlocations[address];
+      // Tu código de búsqueda de ubicación aquí
+    });
