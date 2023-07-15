@@ -1,3 +1,7 @@
+#map {
+  height: 98vh;
+  width: 100hw;
+}
 body {
   margin: 0;
   padding: 0;
