@@ -3,13 +3,26 @@
     //infoBlock.style.display = infoBlock.style.display === 'none' ? 'block' : 'none';
   //});
 
-  document.querySelector('.district-button').addEventListener('click', function() {
-    var infoBlock = document.querySelector('.info-block');
-    infoBlock.style.display = infoBlock.style.display === 'none' ? 'block' : 'none';
+  //document.querySelector('.district-button').addEventListener('click', function() {
+    //var infoBlock = document.querySelector('.info-block');
+    //infoBlock.style.display = infoBlock.style.display === 'none' ? 'block' : 'none';
+  //});
+
+  // Evento de clic en los botones
+var districtButtons = document.querySelectorAll('.district-button');
+districtButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    var district = this.id;
+    toggleInfoBlock(district);
+    fetchDataAndDisplayChart(district);
   });
+});
 
- 
-
+// Función para alternar la visibilidad del bloque de información
+function toggleInfoBlock(district) {
+  var infoBlock = document.getElementById('BloqueInformacion' + district);
+  infoBlock.style.display = infoBlock.style.display === 'none' ? 'block' : 'none';
+}
 
  
   //------------------------------------primer grafico---------------------------------------------

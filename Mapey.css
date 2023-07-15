@@ -52,13 +52,14 @@ header {
 }
 
 .info-block {
-  width: 350px;
-  height: 500px;
+  width: 500px;
+  height: 250px;
   background-color: #F2F2F2;
   border-radius: 30px;
-  margin-top: 20px;
+  margin-top: 100px;
   display: none;
 }
+
 
 .info-toggle {
   background-color: transparent;
