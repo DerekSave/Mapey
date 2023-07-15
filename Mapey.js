@@ -13,17 +13,6 @@ var localizaciones = [{ lat: 40.7128, lon: -74.006, airQuality: 80 }];
 var map = L.map("map").setView([40.7128, -74.006], 13);
 map.addLayer(osmLayer).addLayer(waqiLayer);
 
-
-//document.querySelector('.info-toggle').addEventListener('click', function() {
-    //var infoBlock = document.querySelector('.info-block');
-    //infoBlock.style.display = infoBlock.style.display === 'none' ? 'block' : 'none';
-  //});
-
-  //document.querySelector('.district-button').addEventListener('click', function() {
-    //var infoBlock = document.querySelector('.info-block');
-    //infoBlock.style.display = infoBlock.style.display === 'none' ? 'block' : 'none';
-  //});
-
   // Evento de clic en los botones
 var districtButtons = document.querySelectorAll('.district-button');
 districtButtons.forEach(function(button) {
