@@ -17,71 +17,64 @@
 </head>
 
 <body>
-    <div id="map"></div>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script type="module" src="Mapey.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <header>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Buscar" class="search-input">
-            <button onclick="searchLocation()" class="search-button">Buscar<i class="fas fa-search"></i></button>
+    <div id="overview">
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <script type="module" src="Mapey.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <header>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar" />
+            </div>
+            <h1 class="logo">MAPEY</h1>
+            <button class="info-toggle"><i class="fas fa-chevron-down">Flechita</i></button>
+        </header>
+        <div class="content">
+            <div id="BloqueInformacionManhattan" class="info-block">
+                <div id="BloqueInformacion0"></div>
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            </div>
+            <div id="BloqueInformacionBrooklyn" class="info-block">
+                <div id="BloqueInformacion1"></div>
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            </div>
+            <div id="BloqueInformacionQueens" class="info-block">
+                <div id="BloqueInformacion2"></div>
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            </div>
+            <div id="BloqueInformacionBronx" class="info-block">
+                <div id="BloqueInformacion3"></div>
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            </div>
+            <div id="BloqueInformacionStaten Island" class="info-block">
+                <div id="BloqueInformacion4"></div>
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            </div>
         </div>
 
-        </div>
-        <h1 class="logo">MAPEY</h1>
-        <button class="info-toggle"><i class="fas fa-chevron-down">Flechita</i></button>
-    </header>
 
-    <div class="content">
-        <div id="BloqueInformacionManhattan" class="info-block">
-            <div id="BloqueInformacion0"></div>
-            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <div class="button-container">
+            <button id="Manhattan" class="district-button">Manhattan</button>
+            <button id="Brooklyn" class="district-button">Brooklyn</button>
+            <button id="Queens" class="district-button">Queens</button>
+            <button id="Bronx" class="district-button">Bronx</button>
+            <button id="Staten Island" class="district-button">Staten Island</button>
         </div>
-        <div id="BloqueInformacionBrooklyn" class="info-block">
-            <div id="BloqueInformacion1"></div>
-            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        </div>
-        <div id="BloqueInformacionQueens" class="info-block">
-            <div id="BloqueInformacion2"></div>
-            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        </div>
-        <div id="BloqueInformacionBronx" class="info-block">
-            <div id="BloqueInformacion3"></div>
-            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        </div>
-        <div id="BloqueInformacionStaten Island" class="info-block">
-            <div id="BloqueInformacion4"></div>
-            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        </div>
+
+        <div id="map"></div>
+
+        <script src="https://kit.fontawesome.com/your-kit-id.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="Mapey.js"></script>
+        <div id="BloqueInformacion0"></div>
+        <div id="BloqueInformacion1"></div>
+        <div id="BloqueInformacion2"></div>
+        <div id="BloqueInformacion3"></div>
+        <div id="BloqueInformacion4"></div>
+        <div id="BloqueInformacion5"></div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </div>
-
-
-
-    <div class="button-container">
-        <button id="Manhattan" class="district-button">Manhattan</button>
-        <button id="Brooklyn" class="district-button">Brooklyn</button>
-        <button id="Queens" class="district-button">Queens</button>
-        <button id="Bronx" class="district-button">Bronx</button>
-        <button id="Staten Island" class="district-button">Staten Island</button>
-    </div>
-    </div>
-    <div id="map"></div>
-
-    <script src="https://kit.fontawesome.com/your-kit-id.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="Mapey.js"></script>
-    <div id="BloqueInformacion0"></div>
-    <div id="BloqueInformacion1"></div>
-    <div id="BloqueInformacion2"></div>
-    <div id="BloqueInformacion3"></div>
-    <div id="BloqueInformacion4"></div>
-    <div id="BloqueInformacion5"></div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
-
 </body>
 
 </html>
