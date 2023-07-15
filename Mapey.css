@@ -15,9 +15,11 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  z-index: 0;
 }
-
+.overview {
+  position: relative;
+  z-index: 1;
+}
 .logo {
   font-family: "Moul", cursive;
   font-size: 32px;
